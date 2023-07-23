@@ -1,3 +1,16 @@
-<div class="body">
-    <square [infos]="squareInfo"></square>
+<div class="body center">
+    <div class="table">
+        <div class="left">
+            <square *ngFor="let square of squaresLeft" [infos]="square" unit="€"></square>
+        </div>
+        <div class="top">
+            <square *ngFor="let square of squaresTop" [infos]="square" unit="€"></square>
+        </div>
+        <div class="right">
+            <square *ngFor="let square of squaresRight" [infos]="square" unit="€"></square>
+        </div>
+        <div class="bottom">
+            <square *ngFor="let square of squaresBottom" [infos]="square" unit="€"></square>
+        </div>
+    </div>
 </div>

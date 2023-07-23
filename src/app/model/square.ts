@@ -1,6 +1,10 @@
 export interface SquareInfos{
     text: string,
-    value: number,
-    unit: string,
-    color: string
+    value?: number,
+    color?: string,
+    img?: string,
+    buildCost?: number,
+    pos: number
+    fee?: number[],
+    family: string
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SquareInfos } from '../model/square';
+import { Paris } from 'src/assets/gameData/tables';
 
 @Component({
   selector: 'app-table',
@@ -7,10 +8,28 @@ import { SquareInfos } from '../model/square';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent {
-  protected squareInfo: SquareInfos = {
-    text: "Boulevard Malesherbes",
-    value: 250,
-    unit: '€',
-    color: 'var(--red)'
+
+  protected squaresLeft: SquareInfos[] = [];
+  protected squaresRight: SquareInfos[] = [];
+  protected squaresTop: SquareInfos[] = [];
+  protected squaresBottom: SquareInfos[] = [];
+
+  constructor(){}
+
+  ngOnInit(){
+    Paris.forEach((element: SquareInfos,index: number) => {
+      if(index < 10){
+        this.squaresLeft.push(element);
+      }
+      else if(index < 20){
+        this.squaresTop.push(element);
+      }
+      else if(index < 30){
+        this.squaresRight.push(element);
+      }
+      else{
+        this.squaresBottom.push(element);
+      }
+    });
   }
 }

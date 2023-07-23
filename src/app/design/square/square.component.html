@@ -1,7 +1,7 @@
-<div class="square" [ngStyle]="{'background' : infos.color}">
+<div class="square" [ngStyle]="{'background' : infos.color,'font-family': font,'font-size.px': fontSize, 'height.vw': size, 'width.vw': size}">
     <div class="top center">
         <p>{{infos.value}}</p>
-        <p>{{infos.unit}}</p>
+        <p>{{unit}}</p>
     </div>
     <div class="body center">
         <p>{{infos.text}}</p>
