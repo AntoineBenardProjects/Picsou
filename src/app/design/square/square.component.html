@@ -1,9 +1,25 @@
-<div class="square" [ngStyle]="{'background' : infos.color,'font-family': font,'font-size.px': fontSize, 'height.vw': size, 'width.vw': size}">
-    <div class="top center">
-        <p>{{infos.value}}</p>
-        <p>{{unit}}</p>
-    </div>
-    <div class="body center">
-        <p>{{infos.text}}</p>
+<div class="border center" [ngStyle]="{'height.vw' : size, 'width.vw': size}" *ngIf="infos.family != null && infos.family !== 'Gare'">
+    <div class="square" [ngStyle]="{'font-family': font,'font-size.px': fontSize, 'height.vw': size - 1, 'width.vw': size - 1}">
+        <div class="top center">
+            <p>{{infos.value}}</p>
+            <p>{{unit}}</p>
+        </div>
+        <div class="body center">
+            <p>{{infos.text}}</p>
+        </div>
     </div>
 </div>
+
+<div class="border center" [ngStyle]="{'height.vw' : size, 'width.vw': size}" *ngIf="infos.family != null && infos.family === 'Gare'">
+    <div class="square" [ngStyle]="{'font-family': font,'font-size.px': fontSize, 'height.vw': size - 1, 'width.vw': size - 1}">
+        <div class="topGare center">
+            <p>{{infos.value}}</p>
+            <p>{{unit}}</p>
+        </div>
+        <div class="bodyGare center">
+            <img src="../../../assets/img/paris_gare.png">
+            <p class="center">{{infos.text}}</p>
+        </div>
+    </div>
+</div>
+
