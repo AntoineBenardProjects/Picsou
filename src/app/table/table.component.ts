@@ -18,18 +18,20 @@ export class TableComponent {
 
   ngOnInit(){
     Paris.forEach((element: SquareInfos,index: number) => {
-      if(index < 10){
+      if(index < 14){
         this.squaresLeft.push(element);
       }
-      else if(index < 20){
+      else if(index < 20 && index >=14){
         this.squaresTop.push(element);
       }
-      else if(index < 30){
+      else if(index < 34 && index >= 20){
         this.squaresRight.push(element);
       }
       else{
         this.squaresBottom.push(element);
       }
     });
+    console.log(this.squaresBottom)
   }
+  
 }

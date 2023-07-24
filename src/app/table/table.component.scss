@@ -1,19 +1,22 @@
 .body{
-    background: var(--green);
+    background: var(--white);
     height: 100vh;
     width: 100vw;
 }
 
 .table{
     background: var(--white);
-    height: 100vw;
+    height: 175vw;
     width: 100vw;
     position: relative;
 }
 
 .left,.right,.top,.bottom{display: flex;position: absolute;}
-.left,.right{flex-direction: column;}
+.right{flex-direction: column;}
+.left{flex-direction: column-reverse;}
+.bottom{flex-direction: row-reverse;}
+
 .left{left: 0;}
 .right{right: 0;}
-.bottom{bottom: 0;}
-.top{top: 0;}
+.bottom{bottom: 0; right: 12.5vw;}
+.top{top: 0; left: 12.5vw;}

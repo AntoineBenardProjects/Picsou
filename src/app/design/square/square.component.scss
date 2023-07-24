@@ -1,20 +1,32 @@
 .top,.body{width: 100%;}
-.top{height: 30%; color: var(--white); background: var(--mainColor);}
-.topGare{height: 30%; color: var(--black); background: var(--white);}
+.top{height: 30%; color: var(--white); background: var(--mainColor); font-weight: 1000;}
+.topGare{height: 30%; color: var(--black); background: var(--white); font-weight: 1000;}
 
-.body{height: 70%; color: var(--black); background: var(--white);}
+.body{position: relative; height: 70%; color: var(--white); width: 100%;}
 .bodyGare{
+    position: relative;
     flex-direction: column;
-    height: 70%; color: var(--black); background: var(--white); width: 100%;
+    height: 70%; color: var(--black); width: 100%;
+    background: var(--white);
     img{height: 58%;}
     p{height: 42%;}
 }
+.backgroundBody{position: absolute;width: 100%; height: 100%;opacity: .75; background: var(--mainColor); z-index: -1;}
+.bodyChance{
+    flex-direction: column;
+    height: 100%;
+    color: var(--black); background: var(--white);
+    .img{
+        height: 70%;
+        img{height: 58%;}
+    }
+    p{height: 30%;}
+}
 
-p{text-align: center;}
+p{text-align: center; text-transform: uppercase;}
 
 .square {
     border: 0;
-    font-weight: bold;
     transform-style: preserve-3d;
     transition: transform 0.3s cubic-bezier(0,0,0.58,1);
     cursor: pointer;
@@ -34,7 +46,6 @@ p{text-align: center;}
     width: 100%;
     height: 100%;
     background: var(--black);
-    filter: blur(10px);
     opacity: .50;
     inset: 0;
     transform: translate3d(0, 0, -4px);
