@@ -8,3 +8,7 @@ export interface SquareInfos{
     fee?: number[],
     family: string
 }
+
+export interface PoneInfos{
+    color: string
+}

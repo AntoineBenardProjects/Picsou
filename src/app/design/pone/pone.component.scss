@@ -1,0 +1,39 @@
+.pone,.inside,.border{
+    border-radius: 50%;
+}
+.pone{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background: var(--mainColor);
+    z-index: 100;
+    transition: .1s;
+    &::before{
+        content: '';
+        border-radius: 50%;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: 5px;
+        background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+        z-index: -1;
+        transition: .1s;
+    }
+
+}
+.inside{
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background: var(--mainColor);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.border{
+    background: var(--white);
+    width: 15px;
+    height: 15px;
+}

@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { TableModule } from './table/table.module';
 import { AppRoutingModule } from './app-routing.module';
+import { PoneModule } from './design/pone/pone.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    PoneModule,
     TableModule
   ],
   providers: [],

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SquareInfos } from '../model/square';
+import { PoneInfos, SquareInfos } from '../model/square';
 import { Paris } from 'src/assets/gameData/tables';
 
 @Component({
@@ -13,6 +13,9 @@ export class TableComponent {
   protected squaresRight: SquareInfos[] = [];
   protected squaresTop: SquareInfos[] = [];
   protected squaresBottom: SquareInfos[] = [];
+  protected pone: PoneInfos = {
+    color: 'var(--purple)'
+  }
 
   constructor(){}
 
